@@ -31,30 +31,60 @@ const AboutUs = () => {
 
       {/* Content */}
       <motion.div
-        className="max-w-5xl mx-auto text-lg text-gray-700 leading-relaxed space-y-6 text-justify"
+        className="max-w-6xl mx-auto text-lg text-gray-700 leading-relaxed space-y-6 text-justify"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
         <p>
           At <strong>Unity Associates</strong>, we are passionate about creating a cleaner,
-          greener, and more sustainable future. Our mission is to provide
-          forward-thinking architectural and environmental solutions that balance
-          functionality, aesthetics, and eco-conscious design.
+          greener, and more sustainable future. As a <em>Sustainable Development
+            Consultancy</em>, our mission is to guide businesses, communities, and
+          organizations in adopting eco-friendly strategies that balance growth with
+          environmental responsibility.
         </p>
+
         <p>
-          With a team of experienced professionals, we specialize in{" "}
-          <em>Architecture Design</em>, <em>Green Building Design</em>, and{" "}
-          <em>Sustainable Building Consultancy</em>. We partner with organizations,
-          developers, and communities to implement strategies that reduce
-          environmental impact while maximizing operational efficiency.
+          We specialize in helping clients integrate sustainability into their core
+          operations through <em>green building consultancy</em>, <em>renewable energy
+            planning</em>, <em>environmental compliance</em>, and <em>climate action
+              strategies</em>. Our expert team works closely with stakeholders to identify
+          opportunities, reduce risks, and deliver measurable impact.
         </p>
+
         <p>
-          By combining cutting-edge design principles with sustainable practices, we
-          help our clients not only meet but exceed environmental standards. Together,
-          we turn sustainability into a competitive advantage—delivering value for
-          both business and the planet.
+          From <strong>policy advisory</strong> and <strong>carbon footprint
+            assessments</strong> to <strong>sustainable urban planning</strong> and
+          <strong> resource efficiency programs</strong>, we provide end-to-end
+          consultancy services that drive both environmental and economic value.
         </p>
+
+        <p>
+          What sets us apart is our holistic approach: we align sustainability goals
+          with innovation, technology, and business objectives. This ensures that our
+          clients not only comply with environmental standards but also unlock
+          long-term competitive advantages in their industries.
+        </p>
+
+        <p>
+          At <strong>Unity Associates</strong>, we believe sustainable development is
+          more than a responsibility—it is an opportunity to build resilient systems,
+          stronger communities, and a legacy of positive change for future generations.
+        </p>
+
+        <p>
+          Whether you are an enterprise aiming to achieve net-zero targets, a developer
+          planning an eco-friendly project, or a public institution committed to green
+          initiatives, our consultancy provides the guidance and expertise you need to
+          turn your sustainability vision into reality.
+        </p>
+
+
+        <p>
+          Join us in shaping a future where sustainability is not just an option, but
+          a way of life.
+        </p>
+
       </motion.div>
     </motion.section>
   );
