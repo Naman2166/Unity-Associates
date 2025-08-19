@@ -9,7 +9,7 @@ const Home = () => {
 
 
       {/* Hero Section */}
-      <div className="relative h-[600px] w-full flex flex-col justify-center items-center text-center px-4 overflow-hidden">
+      <div className="relative h-[615px] w-full flex flex-col justify-center items-center text-center px-4 overflow-hidden">
         {/* Background image with blur */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat blur-[2px]"
