@@ -1,10 +1,11 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   // Navigation items
   const navItems = [
@@ -17,26 +18,48 @@ const Navbar = () => {
 
   const scrollTop = () => window.scrollTo(0, 0);
 
+  // Detect scroll only on home page
+  useEffect(() => {
+    if (location.pathname === "/") {
+      const handleScroll = () => {
+        setScrolled(window.scrollY > 100);
+      };
+
+      // ✅ Run once immediately (important fix)
+      handleScroll();
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    } else {
+      setScrolled(true); // force gray on other pages
+    }
+  }, [location]);
+
+
   return (
-    <header className="fixed left-0 top-0 z-50 w-full shadow-md">
+    <header
+      className={`fixed left-0 top-0 z-50 w-full transition-colors duration-300 ${scrolled ? "bg-[#C5CFA0] shadow-md" : "bg-transparent"
+        }`}
+    >
       {/* -------- Desktop Navbar -------- */}
-      <div className="hidden bg-[#C5CFA0] lg:block">    {/* bg-[#C5CFA0]*/}
+      <div className="hidden lg:block">
         <div className="mx-[1.5%] flex items-center justify-between px-5 xl:px-7 py-4 text-sm">
           {/* Logo */}
-          <p className="text-2xl text-gray-950 font-bold cursor-pointer">LOGO</p>
+          <p className={`text-2xl ${scrolled ? "text-gray-950" : "text-gray-50"}  font-bold cursor-pointer`}>
+            LOGO
+          </p>
 
           {/* Nav Items Centered */}
-          <ul className="flex items-center gap-20 font-semibold text-[18px] text-black">
+          <ul className={`flex items-center gap-20 font-bold text-[18px] ${scrolled ? "text-black" : "text-white"} `}>
             {navItems.map(({ to, label }) => (
               <NavLink
                 key={to}
                 to={to}
                 onClick={scrollTop}
                 className={({ isActive }) =>
-                  `flex flex-col items-center transition-all duration-300 hover:scale-105 hover:text-black hover:font-bold  ${
-                    isActive
-                      ? "underline underline-offset-8 decoration-2 decoration-gray-950"
-                      : ""
+                  `flex flex-col items-center transition-all duration-300 hover:scale-110 ${isActive
+                    ? `underline underline-offset-8 decoration-2 ${scrolled ? "decoration-gray-950" : "decoration-gray-50"} `
+                    : ""
                   }`
                 }
               >
@@ -51,7 +74,7 @@ const Navbar = () => {
       </div>
 
       {/* -------- Mobile Navbar -------- */}
-      <div className="block bg-white lg:hidden">
+      <div className="block lg:hidden">
         <div className="flex items-center justify-between px-3 py-2">
           <p className="text-xl font-bold">LOGO</p>
           <FaBars
@@ -92,8 +115,7 @@ const Navbar = () => {
                     scrollTop();
                   }}
                   className={({ isActive }) =>
-                    `block w-full rounded px-2 py-2 hover:bg-gray-100 ${
-                      isActive ? "underline" : ""
+                    `block w-full rounded px-2 py-2 hover:bg-gray-100 ${isActive ? "underline" : ""
                     }`
                   }
                 >

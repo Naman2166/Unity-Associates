@@ -9,7 +9,7 @@ const Home = () => {
 
 
       {/* Hero Section */}
-      <div className="relative h-[615px] w-full flex flex-col justify-center items-center text-center px-4 overflow-hidden">
+      <div className="relative h-[680px] w-full flex flex-col justify-center items-center text-center px-4 overflow-hidden">
         {/* Background image with blur */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat blur-[2px]"
@@ -31,7 +31,7 @@ const Home = () => {
           </motion.h1>
 
           <motion.h2
-            className="italic text-green-500 text-5xl md:text-[100px] font-bold"
+            className="italic text-green-600 text-5xl md:text-[100px] font-bold"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
@@ -40,7 +40,7 @@ const Home = () => {
           </motion.h2>
 
           <motion.p
-            className="text-lg md:text-2xl font-medium mt-4 text-gray-200"
+            className="text-lg md:text-2xl font-semibold mt-4 text-gray-200"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 1 }}
@@ -63,7 +63,9 @@ const Home = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-5xl font-bold text-gray-800 mb-6">About Us</h2>
+        <h2 className="text-5xl font-bold text-center text-gray-800 mb-6">
+          About <span className="text-green-600">Us</span>
+        </h2>
         <p className="text-xl text-gray-600 max-w-6xl mx-auto leading-relaxed text-justify">
           At <span className="font-semibold text-green-600">Unity Associates</span>,
           We are passionate about creating a cleaner, greener, and more sustainable future.
@@ -177,8 +179,9 @@ const Home = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-12">
-          Our Services
+        
+        <h2 className="text-4xl font-bold text-center text-gray-800 my-12">
+          Our <span className="text-green-600">Services</span>
         </h2>
 
         <div className="grid gap-8 md:grid-cols-3">

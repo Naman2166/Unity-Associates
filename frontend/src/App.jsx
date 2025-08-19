@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className=''>              
     
-    <div className='mb-14 sm:mb-14 md:mb-14 lg:mb-14 xl:mb-[4rem]'>
+    <div className='mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-[0rem]'>    {/*mb-14 sm:mb-14 md:mb-14 lg:mb-14 xl:mb-[4rem]'>*/}
     <Navbar />
     </div>
     
