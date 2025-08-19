@@ -36,10 +36,10 @@ const galleryImages = [
 
 const Gallery = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 mt-7 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
+        <h2 className="text-6xl font-bold text-gray-800 text-center mb-6">
           Our <span className="text-green-600">Gallery</span>
         </h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">

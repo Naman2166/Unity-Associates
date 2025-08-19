@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin } from "lucide-react"; // Professional icons
 const ContactUs = () => {
   return (
     <motion.section
-      className="py-20 px-6 md:px-16 bg-gray-50"
+      className="py-20 px-6 md:px-16 bg-gray-50 mt-7"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}

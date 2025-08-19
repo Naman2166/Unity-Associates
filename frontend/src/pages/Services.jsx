@@ -37,7 +37,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="py-20 px-6 ">
+    <div className="py-20 mt-6 px-6 ">
       {/* Heading */}
       <motion.h1
         className="text-6xl md:text-7xl font-bold text-center text-gray-900 mb-12"
@@ -49,11 +49,11 @@ const Services = () => {
       </motion.h1>
 
       {/* Service Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-gray-50 rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow"
+            className="bg-gray-50 rounded-xl shadow-lg p-5 text-center hover:shadow-xl transition-shadow"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}

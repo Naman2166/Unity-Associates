@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const AboutUs = () => {
   return (
     <motion.section
-      className="py-20 px-6 md:px-20"
+      className="py-20 px-6 md:px-20 mt-7"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
