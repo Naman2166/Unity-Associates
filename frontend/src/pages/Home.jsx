@@ -365,6 +365,7 @@ const Home = () => {
           </motion.div>
         </div>
 
+
         {/* MAGARPATTA CITY */}
         <motion.div
           className="grid grid-cols-1 gap-8 items-center mt-10 md:mt-16"
@@ -402,9 +403,9 @@ const Home = () => {
         {/* Major Projects List */}
         <motion.div
           className="mt-20 max-w-6xl mx-auto"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
+          initial={{ opacity: 0, y:0 }}
+          whileInView={{ opacity: 1, y:0}}
+          transition={{ duration: 1, delay: 0.3 }}
         >
           <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">
             Major Projects
@@ -423,9 +424,9 @@ const Home = () => {
               <motion.div
                 key={index}
                 className="flex items-start gap-3 bg-white p-4 sm:p-6 rounded-xl shadow-sm hover:shadow-md transition"
-                initial={{ opacity: 0.2, y: 20 }}
+                initial={{ opacity: 0, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.7, delay: 0.7 }}
               >
                 {/* Icon */}
                 <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-green-500">
@@ -457,7 +458,7 @@ const Home = () => {
       {/* Renowned Clients Section */}
       <motion.section
         className="max-w-7xl mx-auto mt-20 px-4 sm:px-6"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 0 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
@@ -478,9 +479,9 @@ const Home = () => {
             <motion.div
               key={idx}
               className="p-3 sm:p-6 rounded-xl shadow-md bg-white hover:shadow-lg transition"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.7, delay: 0.7 }}
             >
               <p className="font-medium text-sm sm:text-base md:text-lg text-gray-800">
                 {client}
