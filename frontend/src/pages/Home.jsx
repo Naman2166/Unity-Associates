@@ -309,6 +309,190 @@ const Home = () => {
 
 
 
+
+
+      {/* Projects Section */}
+      <motion.section
+        className="max-w-7xl mx-auto mt-20 px-4 sm:px-6"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 my-12">
+          Projects <span className="text-green-600">Involved</span>
+        </h2>
+
+        {/* Individual Projects with Images */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* ALGATH TOWER */}
+          <motion.div
+            className="flex flex-col items-center text-center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4">
+              ALGATH TOWER, UAE – 63 Story 2 Buildings
+            </h3>
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg mb-6">
+              A landmark high-rise residential and commercial project in UAE.
+            </p>
+            <img
+              src={assets.p1}
+              alt="Algath Tower"
+              className="rounded-xl shadow-lg w-auto max-w-md h-[300px] sm:h-[400px] md:h-[450px] object-cover"
+            />
+          </motion.div>
+
+          {/* ANTILIA */}
+          <motion.div
+            className="flex flex-col items-center text-center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4">
+              ANTILIA, Residence of RIL CMD, Mumbai
+            </h3>
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg mb-6">
+              One of the most iconic private residences in the world.
+            </p>
+            <img
+              src={assets.p2}
+              alt="Antilia"
+              className="rounded-xl shadow-lg w-auto max-w-md h-[300px] sm:h-[400px] md:h-[450px] object-cover"
+            />
+          </motion.div>
+        </div>
+
+        {/* MAGARPATTA CITY */}
+        <motion.div
+          className="grid grid-cols-1 gap-8 items-center mt-10 md:mt-16"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          <div className="text-center">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold my-4">
+              MAGARPATTA CITY, Pune – 600 Acre Township
+            </h3>
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg">
+              A large-scale township project that redefined urban living in Pune.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 md:gap-6">
+            <div className="flex justify-center">
+              <img
+                src={assets.p3}
+                alt="Magarpatta City 1"
+                className="rounded-xl shadow-lg w-auto h-[200px] sm:h-[200px] md:h-[350px]"
+              />
+            </div>
+            <div className="flex justify-center">
+              <img
+                src={assets.p4}
+                alt="Magarpatta City 2"
+                className="rounded-xl shadow-lg w-auto h-[200px] sm:h-[200px] md:h-[350px]"
+              />
+            </div>
+          </div>
+        </motion.div>
+
+
+        {/* Major Projects List */}
+        <motion.div
+          className="mt-20 max-w-6xl mx-auto"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+        >
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">
+            Major Projects
+           <p className="text-center font-normal text-lg mt-2">The Major Projects in which we were involved under roof of Different Organizations</p>
+          </h3>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+            {[
+              "Algath Tower, UAE – 63 Story 2 Buildings",
+              "UAE University, Al Ain – 12 Acre Campus",
+              "Magarpatta Township, Pune – 600 Acre Township",
+              "Antilia, Residence of RIL CMD, Mumbai",
+              "Reliance Twin Tower, at RCP, Navi Mumbai",
+              "RCP Infra Project – 500 Acre RIL Campus, Navi Mumbai",
+            ].map((project, index) => (
+              <motion.div
+                key={index}
+                className="flex items-start gap-3 bg-white p-4 sm:p-6 rounded-xl shadow-sm hover:shadow-md transition"
+                initial={{ opacity: 0.2, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                {/* Icon */}
+                <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-green-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={3}
+                    stroke="white"
+                    className="w-4 h-4 sm:w-5 sm:h-5"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                {/* Project Name */}
+                <p className="text-sm sm:text-base md:text-lg font-medium text-gray-800">
+                  {project}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+      </motion.section>
+
+
+
+
+      {/* Renowned Clients Section */}
+      <motion.section
+        className="max-w-7xl mx-auto mt-20 px-4 sm:px-6"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 my-12">
+          Renowned <span className="text-green-600">Clients</span>
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center p-2 sm:p-4">
+          {[
+            "Reliance Industries Ltd.",
+            "Adani Group, Ahmedabad.",
+            "Lodha Group, Mumbai.",
+            "UTI Ltd, BKC Mumbai.",
+            "IOCL, Odisha.",
+            "Shapoorji Pallonji Group.",
+            "Pitambari Products Pvt. Ltd.",
+            "EMIL Pharma Ltd. Mumbai.",
+          ].map((client, idx) => (
+            <motion.div
+              key={idx}
+              className="p-3 sm:p-6 rounded-xl shadow-md bg-white hover:shadow-lg transition"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <p className="font-medium text-sm sm:text-base md:text-lg text-gray-800">
+                {client}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+
+
+
       {/* Last image */}
       <motion.img
         src={assets.b3}
@@ -318,8 +502,6 @@ const Home = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.8, duration: 0.8 }}
       />
-
-
 
 
     </div>

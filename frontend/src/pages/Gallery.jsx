@@ -1,75 +1,85 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { assets } from "../assets/assets";
 
 const galleryImages = [
-  {
-    id: 1,
-    src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df",
-    alt: "Consultants Discussing Sustainable Project",
-  },
-  {
-    id: 2,
-    src: "https://plus.unsplash.com/premium_photo-1679917152396-4b18accacb9d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c29sYXIlMjBwYW5lbHxlbnwwfHwwfHx8MA%3D%3D",
-    alt: "Solar Energy Project",
-  },
-  {
-    id: 3,
-    src: "https://images.unsplash.com/photo-1716479852874-22742b84fef5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3VzdGFpbmFibGUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D",
-    alt: "Economical Planning",
-  },
-  {
-    id: 4,
-    src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
-    alt: "Teamwork and Sustainable Planning",
-  },
-  {
-    id: 5,
-    src: "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHN1c3RhaW5hYmxlJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D",
-    alt: "Architects Planning Eco-Friendly Buildings",
-  },
-  {
-    id: 6,
-    src: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c",
-    alt: "Eco City Development Model",
-  },
+  assets.g2_unsplash, assets.g3_unsplash, assets.g4_unsplash,
+  assets.g1, assets.g2, assets.g3, assets.g4, assets.g5, assets.g6,
+  assets.g7, assets.g8, assets.g9, assets.g10,
+  assets.g11, assets.g12, assets.g13, assets.g14, assets.g15, assets.g16, assets.g17,
 ];
+
+// Variants for staggered animation
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 const Gallery = () => {
   return (
-    <section className="py-16 mt-7 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+    <motion.section
+      className="py-16 mt-7 bg-gray-50"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Heading */}
-        <h2 className="text-6xl font-bold text-gray-800 text-center mb-6">
+        <motion.h2
+          className="text-6xl md:text-7xl font-bold text-gray-800 text-center mb-6"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           Our <span className="text-green-600">Gallery</span>
-        </h2>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        </motion.h2>
+
+        <motion.p
+          className="text-center text-gray-600 mb-12 max-w-2xl mx-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1 }}
+        >
           A glimpse into our vision of sustainable development — from 
           eco-friendly designs and renewable energy projects to 
           collaborative consultancy and innovative solutions.
-        </p>
+        </motion.p>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {galleryImages.map((image) => (
+        {/* Gallery Grid with Stagger Animation */}
+        <motion.div
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {galleryImages.map((image, index) => (
             <motion.div
-              key={image.id}
+              key={index}
               className="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl"
+              variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
               <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-64 object-cover"
+                src={image}
+                alt={`gallery-${index}`}
+                className="w-full h-40 md:h-64 object-cover"
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 flex items-center justify-center text-white text-lg font-semibold transition">
-                {image.alt}
-              </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

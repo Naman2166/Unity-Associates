@@ -18,15 +18,10 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#C5CFA0] text-gray-800 w-full">
-      <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-3 gap-8">
         {/* Logo & About */}
         <div>
           <div className="flex items-center gap-2">
-            {/* <img
-              src="/logo.png"
-              alt="Logo"
-              className="h-10 w-10 object-contain"
-            /> */}
             <span className="text-xl font-medium">
               Unity Associates
             </span>
@@ -55,7 +50,7 @@ const Footer = () => {
         </div>
 
         {/* Social Media */}
-        <div className="text-center">
+        <div className="text-center col-span-2 md:col-span-1">
           <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
           <div className="flex justify-center  gap-4">
             <a

@@ -1,8 +1,28 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react"; // Professional icons
 
+
 const ContactUs = () => {
+
+  
+  const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true); // wait until hydration
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize(); // set immediately on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  if (!mounted) return null; // 👈 prevent wrong initial animation
+
+
+
   return (
     <motion.section
       className="py-20 px-6 md:px-16 bg-gray-50 mt-7"
@@ -33,9 +53,10 @@ const ContactUs = () => {
 
       {/* Grid Layout */}
       <div className="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+
         {/* Left Side - Contact Info */}
         <motion.div
-          className="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-center"
+          className="order-2 md:order-1 bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-center"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -96,8 +117,8 @@ const ContactUs = () => {
 
         {/* Right Side - Form */}
         <motion.div
-          className="bg-white shadow-lg rounded-2xl p-8 md:p-12 border border-gray-100"
-          initial={{ opacity: 0, x: 50 }}
+          className="order-1 md:order-2 bg-white shadow-lg rounded-2xl p-8 md:p-12 border border-gray-100"
+          initial={isMobile ? { opacity: 0, x: -50 } : { opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -132,11 +153,11 @@ const ContactUs = () => {
             {/* Subject */}
             <div>
               <label className="block text-gray-800 font-semibold mb-2">
-                Subject
+                Phone
               </label>
               <input
                 type="text"
-                placeholder="Enter subject..."
+                placeholder="Enter Phone Number...."
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all"
               />
             </div>

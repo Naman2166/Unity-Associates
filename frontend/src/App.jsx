@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Career from './pages/Career'
 
 
 
@@ -22,9 +23,10 @@ const App = () => {
     
     <Routes>
        <Route path='/' element={<Home />} />                        {/* on "/" route , Home component will appear */}       
+       <Route path='/about-us' element={<AboutUs />} />
        <Route path='/services' element={<Services />} /> 
        <Route path='/gallery' element={<Gallery />} />  
-       <Route path='/about-us' element={<AboutUs />} />
+       <Route path='/career' element={<Career />} />  
        <Route path='/contact-us' element={<ContactUs />} />
     </Routes>
 
