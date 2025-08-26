@@ -51,7 +51,7 @@ const Navbar = () => {
         <div className="mx-[1.5%] flex items-center justify-between px-5 xl:px-7 py-3 text-sm">
           
           {/* Logo */}
-          <img src={assets.Logo_withoutBackground} className="h-10 w-auto border-2 border-white" alt='LOGO'/>
+          <img src={assets.Logo_withoutBackground} className="h-10 w-auto" alt='LOGO'/>
           {/* <p
             className={`text-2xl ${scrolled ? "text-gray-950" : "text-gray-50"
               } font-bold cursor-pointer`}
