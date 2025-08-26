@@ -37,7 +37,7 @@ const ContactUs = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        Let’s <span className="text-green-600">Connect</span>
+        Let’s <span className="text-[#1494a0]">Connect</span>
       </motion.h1>
 
       {/* Tagline */}
@@ -72,25 +72,25 @@ const ContactUs = () => {
 
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
-              <Mail className="text-green-600 w-6 h-6" />
+              <Mail className="text-[#1494a0] w-6 h-6" />
               <a
                 href="mailto:info@unityassociates.com"
-                className="text-gray-700 hover:text-green-600"
+                className="text-gray-700 "
               >
                 info@unityassociates.com
               </a>
             </div>
             <div className="flex items-center space-x-4">
-              <Phone className="text-green-600 w-6 h-6" />
+              <Phone className="text-[#1494a0] w-6 h-6" />
               <a
                 href="tel:+911234567890"
-                className="text-gray-700 hover:text-green-600"
+                className="text-gray-700 "
               >
                 +91 12345 67890
               </a>
             </div>
             <div className="flex items-center space-x-4">
-              <MapPin className="text-green-600 w-6 h-6" />
+              <MapPin className="text-[#1494a0] w-6 h-6" />
               <span className="text-gray-700">
                 123 Green Avenue, Eco City, India
               </span>

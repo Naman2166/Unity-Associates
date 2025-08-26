@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { assets } from "../assets/assets";
 
 const Footer = () => {
   const navLinks = [
@@ -22,6 +23,7 @@ const Footer = () => {
         {/* Logo & About */}
         <div>
           <div className="flex items-center gap-2">
+            <img src={assets.Logo_withoutBackground} className="h-6 w-auto" alt=""/>
             <span className="text-xl font-medium">
               Unity Associates
             </span>

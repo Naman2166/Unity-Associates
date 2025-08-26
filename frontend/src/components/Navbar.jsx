@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { assets } from "../assets/assets";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -47,14 +48,17 @@ const Navbar = () => {
     >
       {/* -------- Desktop Navbar -------- */}
       <div className="hidden lg:block">
-        <div className="mx-[1.5%] flex items-center justify-between px-5 xl:px-7 py-4 text-sm">
+        <div className="mx-[1.5%] flex items-center justify-between px-5 xl:px-7 py-3 text-sm">
+          
           {/* Logo */}
-          <p
+          <img src={assets.Logo_withoutBackground} className="h-10 w-auto border-2 border-white" alt='LOGO'/>
+          {/* <p
             className={`text-2xl ${scrolled ? "text-gray-950" : "text-gray-50"
               } font-bold cursor-pointer`}
           >
             LOGO
-          </p>
+          </p> */}
+
 
           {/* Nav Items Centered */}
           <ul
@@ -92,7 +96,7 @@ const Navbar = () => {
       {/* -------- Mobile Navbar -------- */}
       <div className="block lg:hidden bg-[#C5CFA0] shadow-md">
         <div className="flex items-center justify-between px-3 py-2">
-          <p className="text-xl font-bold">LOGO</p>
+          <img src={assets.Logo_withoutBackground} className="h-10 w-auto" alt=""/>
           <FaBars
             onClick={() => setShowMenu(true)}
             className="my-2 text-2xl cursor-pointer"
@@ -126,8 +130,8 @@ const Navbar = () => {
               >
                 {/* Header */}
                 <div className="flex items-center justify-between p-4 border-b border-gray-800">
-                  <p className="text-xl font-bold">LOGO</p>
-                  <button
+                <img src={assets.Logo_withoutBackground} className="h-10 w-auto" alt=""/>
+                <button
                     type="button"
                     onClick={() => setShowMenu(false)}
                     className="text-3xl font-bold"

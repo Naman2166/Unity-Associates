@@ -12,7 +12,7 @@ const Career = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: false }}
       >
-        Join <span className="text-green-600">Us</span>
+        Join <span className="text-[#1494a0]">Us</span>
       </motion.h1>
 
       {/* Tagline */}

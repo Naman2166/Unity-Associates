@@ -41,7 +41,7 @@ const Gallery = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Our <span className="text-green-600">Gallery</span>
+          Our <span className="text-[#1494a0]">Gallery</span>
         </motion.h2>
 
         <motion.p

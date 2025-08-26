@@ -1,4 +1,5 @@
 import b1 from './b1.jpg'
+import b1_copy from './b1_copy.jpg'
 import b2 from './b2.jpg'
 import b3 from './b3.jpg'
 import b4 from './b4.jpg'
@@ -35,11 +36,12 @@ import g16 from './gallery/g16.jpeg'
 import g17 from './gallery/g17.jpeg'
 import mission from './mission.webp'
 import vision from './vision.jpg'
-
+import logo from './Logo.jpg'
+import Logo_withoutBackground from './Logo_withoutBackground.png'
 
 
 export const assets = {
-  b1,
+  b1,b1_copy,
   b2,
   b3,
   b4,
@@ -50,5 +52,8 @@ export const assets = {
   g1_unsplash,g2_unsplash,g3_unsplash,g4_unsplash,g5_unsplash,
   g1,g2,g3,g4,g5,g6,g7,g8,g9,g10,g11,g12,g13,g14,g15,g16,g17,
   mission,vision,
+  logo,Logo_withoutBackground,
 
+  
+  
 }

@@ -36,7 +36,7 @@ const AboutUs = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 1 }}
       >
-        About <span className="text-green-600">Unity Associates</span>
+        About <span className="text-[#1494a0]">Unity Associates</span>
       </motion.h1>
 
       {/* Tagline */}
@@ -142,13 +142,13 @@ const AboutUs = () => {
 
       {/* Founder Profile */}
       <motion.div
-        className="max-w-6xl mx-auto bg-white shadow-lg rounded-2xl p-5 md:p-9 border-t-4 border-green-600 mt-15 md:mt-18"
+        className="max-w-6xl mx-auto bg-white shadow-lg rounded-2xl p-5 md:p-9 border-t-4 border-[#1494a0] mt-15 md:mt-18"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
-          Meet Our Founder – <span className="text-green-600">Sachin Jadhav</span>
+          Meet Our Founder – <span className="text-[#1494a0]">Sachin Jadhav</span>
         </h2>
 
         <p className="text-gray-700 text-lg mb-6 text-justify">
@@ -189,13 +189,13 @@ const AboutUs = () => {
 
       {/* Team Members */}
       <motion.div
-        className="max-w-6xl mx-auto bg-white shadow-lg rounded-2xl p-5 md:p-9 border-t-4 border-green-600 mt-15 md:mt-18"
+        className="max-w-6xl mx-auto bg-white shadow-lg rounded-2xl p-5 md:p-9 border-t-4 border-[#1494a0] mt-15 md:mt-18"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
-          Executive <span className="text-green-600">Team</span>
+          Executive <span className="text-[#1494a0]">Team</span>
         </h2>
 
         <div className="grid md:grid-cols-2 gap-5 md:gap-8 mt-8">
@@ -207,7 +207,7 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-xl font-semibold text-green-700 mb-2">
+            <h3 className="text-xl font-semibold text-[#1494a0] mb-2">
               Vishwas Avalaskar (B.E. Mech)
             </h3>
             <p className="text-gray-700 text-justify text-sm leading-relaxed">
@@ -228,7 +228,7 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-xl font-semibold text-green-700 mb-2">
+            <h3 className="text-xl font-semibold text-[#1494a0] mb-2">
               Dr. Alka Y. Pisal (Ph.D – IIT Bombay)
             </h3>
             <p className="text-gray-700 text-justify text-sm leading-relaxed">
@@ -247,7 +247,7 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.0 }}
           >
-            <h3 className="text-xl font-semibold text-green-700 mb-2">
+            <h3 className="text-xl font-semibold text-[#1494a0] mb-2">
               Sh. Gorakh Bhalekar (B.E. Civil)
             </h3>
             <p className="text-gray-700 text-justify text-sm leading-relaxed">
@@ -266,7 +266,7 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
           >
-            <h3 className="text-xl font-semibold text-green-700 mb-2">
+            <h3 className="text-xl font-semibold text-[#1494a0] mb-2">
               Sh. Sachin Pokale (B.E. Ele.)
             </h3>
             <p className="text-gray-700 text-justify text-sm leading-relaxed">

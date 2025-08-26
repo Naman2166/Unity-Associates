@@ -33,7 +33,7 @@ const Home = () => {
         {/* Background image with blur */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat blur-[2px]"
-          style={{ backgroundImage: `url(${assets.b1})` }}
+          style={{ backgroundImage: `url(${assets.b1_copy})` }}
         ></div>
 
         {/* Overlay */}
@@ -52,7 +52,7 @@ const Home = () => {
           </motion.h1>
 
           <motion.h2
-            className="italic text-green-600 text-4xl md:text-[75px] xl:text-[100px] font-bold"
+            className="italic text-[#1494a0] text-4xl md:text-[75px] xl:text-[100px] font-bold"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
@@ -88,7 +88,7 @@ const Home = () => {
         viewport={{ once: false, amount: 0.3 }}
       >
         <h2 className="text-5xl font-bold text-center text-gray-800 mb-6">
-          About <span className="text-green-600">Us</span>
+          About <span className="text-[#1494a0]">Us</span>
         </h2>
         <motion.div
           className="max-w-6xl mx-auto p-6 md:p-8 bg-white/90 backdrop-blur-md rounded-lg shadow-gray-500 shadow-lg border border-gray-200"
@@ -101,7 +101,7 @@ const Home = () => {
             className={`text-base md:text-xl text-gray-700 leading-relaxed text-justify transition-all duration-300 ${expanded ? "line-clamp-none" : "line-clamp-7 md:line-clamp-none"
               }`}
           >
-            At <span className="font-semibold text-green-600">Unity Associates</span>,
+            At <span className="font-semibold text-[#1494a0]">Unity Associates</span>,
             we are passionate about creating a cleaner, greener, and more sustainable future.
             Our expert consultancy services help organizations adopt eco-friendly strategies,
             optimize operational efficiency, and drive innovation that benefits both business and the planet.
@@ -120,7 +120,7 @@ const Home = () => {
           <div className="mt-3 flex justify-center md:hidden">
             <button
               onClick={() => setExpanded(!expanded)}
-              className="text-green-600 font-semibold hover:underline"
+              className="text-[#1494a0] font-semibold hover:underline"
             >
               {expanded ? "Read Less ▲" : "Read More ▼"}
             </button>
@@ -137,7 +137,7 @@ const Home = () => {
       <section className="py-16 mb-10">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-gray-800 mb-6">
-            Why Choose <span className="text-green-600">Unity Associates</span>?
+            Why Choose <span className="text-[#1494a0]">Unity Associates</span>?
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-12">
             As a new-age sustainable development consultancy, we are driven by
@@ -154,7 +154,7 @@ const Home = () => {
               viewport={{ once: false, amount: 0 }}
               className="bg-gray-50 shadow-md rounded-2xl p-3 py-4 md:p-6 hover:shadow-xl transition"
             >
-              <ShieldCheck className="w-10 h-10 text-green-600 mx-auto mb-4" />
+              <ShieldCheck className="w-10 h-10 text-[#1494a0] mx-auto mb-4" />
               <h3 className="font-semibold text-[15px] md:text-lg mb-2">Trusted Expertise</h3>
               <p className="text-gray-600 text-[12px] md:text-[15px]">
                 A team of passionate consultants with strong academic and
@@ -170,7 +170,7 @@ const Home = () => {
               viewport={{ once: false, amount: 0 }}
               className="bg-gray-50 shadow-md rounded-2xl p-3 py-4 md:p-6  hover:shadow-xl transition"
             >
-              <Lightbulb className="w-10 h-10 text-green-600 mx-auto mb-4" />
+              <Lightbulb className="w-10 h-10 text-[#1494a0] mx-auto mb-4" />
               <h3 className="font-semibold text-[15px] md:text-lg mb-2">Innovative Approach</h3>
               <p className="text-gray-600 text-[12px] md:text-[15px]">
                 We stay updated with global frameworks (LEED, ISO, ESG) and
@@ -186,7 +186,7 @@ const Home = () => {
               viewport={{ once: false, amount: 0 }}
               className="bg-gray-50 shadow-md rounded-2xl p-3 py-4 md:p-6  hover:shadow-xl transition"
             >
-              <Leaf className="w-10 h-10 text-green-600 mx-auto mb-4" />
+              <Leaf className="w-10 h-10 text-[#1494a0] mx-auto mb-4" />
               <h3 className="font-semibold text-[15px] md:text-lg mb-2">Sustainability First</h3>
               <p className="text-gray-600 text-[12px] md:text-[15px]">
                 Every recommendation is designed to reduce costs, minimize
@@ -202,7 +202,7 @@ const Home = () => {
               viewport={{ once: false, amount: 0 }}
               className="bg-gray-50 shadow-md rounded-2xl p-3 py-4 md:p-6  hover:shadow-xl transition"
             >
-              <Users className="w-10 h-10 text-green-600 mx-auto mb-4" />
+              <Users className="w-10 h-10 text-[#1494a0] mx-auto mb-4" />
               <h3 className="font-semibold text-[15px] md:text-lg mb-2">Client-Centered</h3>
               <p className="text-gray-600 text-[12px] md:text-[15px]">
                 We focus on building long-lasting relationships, ensuring
@@ -253,7 +253,7 @@ const Home = () => {
       >
 
         <h2 className="text-4xl font-bold text-center text-gray-800 my-12">
-          Our <span className="text-green-600">Services</span>
+          Our <span className="text-[#1494a0]">Services</span>
         </h2>
 
         <div className="grid gap-6 md:gap-8 grid-cols-2 md:grid-cols-3">
@@ -319,7 +319,7 @@ const Home = () => {
         transition={{ duration: 1 }}
       >
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 my-12">
-          Projects <span className="text-green-600">Involved</span>
+          Projects <span className="text-[#1494a0]">Involved</span>
         </h2>
 
         {/* Individual Projects with Images */}
@@ -408,9 +408,10 @@ const Home = () => {
           transition={{ duration: 1, delay: 0.3 }}
         >
           <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">
-            Major Projects
+            Major <span className="text-[#1494a0]">Projects</span>
            <p className="text-center font-normal text-lg mt-2">The Major Projects in which we were involved under roof of Different Organizations</p>
           </h3>
+          
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             {[
@@ -463,7 +464,7 @@ const Home = () => {
         transition={{ duration: 1 }}
       >
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 my-12">
-          Renowned <span className="text-green-600">Clients</span>
+          Renowned <span className="text-[#1494a0]">Clients</span>
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center p-2 sm:p-4">
           {[

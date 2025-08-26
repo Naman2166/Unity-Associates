@@ -5,32 +5,32 @@ import { FaBuilding, FaDraftingCompass, FaLeaf, FaSolarPanel, FaHardHat, FaCity 
 const Services = () => {
   const services = [
     {
-      icon: <FaBuilding className="text-green-600 text-5xl" />,
+      icon: <FaBuilding className="text-[#1494a0] text-5xl" />,
       title: "Sustainable Building Design",
       description: "We create eco-friendly building designs that balance aesthetics, functionality, and environmental responsibility."
     },
     {
-      icon: <FaDraftingCompass className="text-green-600 text-5xl" />,
+      icon: <FaDraftingCompass className="text-[#1494a0] text-5xl" />,
       title: "Architectural Consultation",
       description: "Expert advice on building layouts, space utilization, and compliance with modern construction standards."
     },
     {
-      icon: <FaLeaf className="text-green-600 text-5xl" />,
+      icon: <FaLeaf className="text-[#1494a0] text-5xl" />,
       title: "Environmental Compliance",
       description: "Guidance on using energy-efficient, sustainable, and durable construction materials."
     },
     {
-      icon: <FaSolarPanel className="text-green-600 text-5xl" />,
+      icon: <FaSolarPanel className="text-[#1494a0] text-5xl" />,
       title: "Renewable Energy Integration",
       description: "Planning and integration of solar panels, rainwater harvesting, and other sustainable technologies."
     },
     {
-      icon: <FaHardHat className="text-green-600 text-5xl" />,
+      icon: <FaHardHat className="text-[#1494a0] text-5xl" />,
       title: "Corporate ESG Reporting",
       description: "End-to-end supervision ensuring timely delivery, quality standards, and sustainable practices."
     },
     {
-      icon: <FaCity className="text-green-600 text-5xl" />,
+      icon: <FaCity className="text-[#1494a0] text-5xl" />,
       title: "Community & Social Impact",
       description: "Advisory services for sustainable urban infrastructure and smart city development."
     },
@@ -45,7 +45,7 @@ const Services = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        Our <span className="text-green-600">Services</span>
+        Our <span className="text-[#1494a0]">Services</span>
       </motion.h1>
 
       {/* Service Cards */}
